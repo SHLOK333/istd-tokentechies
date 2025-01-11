@@ -17,6 +17,13 @@ The **Solidity Vulnerability Analyzer** is a tool designed to help developers id
 - **Webpack** for bundling the extension
 - **Node.js** and **TypeScript** for extension development
 
+
+![WhatsApp Image 2025-01-11 at 11 26 25_407dd3b6](https://github.com/user-attachments/assets/b4e37298-e892-4e2a-8ca6-c32fe2e517dd)
+
+
+
+
+
 ## Installation
 
 ### Backend Setup
