@@ -1,71 +1,81 @@
-# SHLOK README
+# Solidity Vulnerability Analyzer
 
-This is the README for your extension "SHLOK". After writing up a brief description, we recommend including the following sections.
+## Overview
+The **Solidity Vulnerability Analyzer** is a tool designed to help developers identify security vulnerabilities in their Solidity smart contracts. It uses advanced AI and natural language processing techniques to analyze smart contract code and highlight potential risks. This tool is ideal for both beginners and experienced developers to ensure their code is secure before deploying it on the blockchain.
 
 ## Features
+- **AI-based analysis:** Automatically detects common vulnerabilities such as reentrancy attacks, uninitialized state variables, and more.
+- **Real-time feedback:** Provides immediate analysis on the code in your editor and suggests improvements.
+- **Solidity code support:** Specifically built to understand Solidity syntax and its unique features.
+- **Easy integration:** A Visual Studio Code extension that can be easily added to your development environment.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Technologies Used
+- **Flask** for the backend API
+- **Ollama** for AI-based contract analysis
+- **Visual Studio Code** extension for integration
+- **Axios** for HTTP requests
+- **Webpack** for bundling the extension
+- **Node.js** and **TypeScript** for extension development
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+### Backend Setup
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/SHLOK333/solidity-vuln-analyzer.git
+    ```
+2. Navigate to the backend folder and set up the Python environment:
+    ```bash
+    cd backend
+    python -m venv .venv
+    source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+    pip install -r requirements.txt
+    ```
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+3. Start the Flask server:
+    ```bash
+    python app.py
+    ```
 
-## Requirements
+### Frontend (VS Code Extension) Setup
+1. Clone the repository and navigate to the `SHLOK` folder:
+    ```bash
+    git clone https://github.com/SHLOK333/solidity-vuln-analyzer.git
+    cd SHLOK
+    ```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-## Extension Settings
+3. Compile the extension:
+    ```bash
+    npm run compile
+    ```
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+4. Start the extension in Visual Studio Code:
+    - Open the folder in VS Code
+    - Press `F5` to launch the extension.
 
-For example:
+## Usage
 
-This extension contributes the following settings:
+1. Open a Solidity file in Visual Studio Code.
+2. Use the command `Check Solidity Vulnerabilities` from the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
+3. The extension will analyze the code, and any detected vulnerabilities will be displayed in a message.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Challenges We Ran Into
+- **Handling Solidity syntax:** Ensuring the analysis engine can handle different types of Solidity code and syntax errors.
+- **Integration with AI:** Integrating Ollama API with Flask to provide real-time feedback on the code.
+- **Cross-platform compatibility:** Ensuring the VS Code extension works seamlessly on both Windows and macOS.
 
-## Known Issues
+## Future Improvements
+- **Support for more vulnerabilities:** Adding support for a wider range of known vulnerabilities in Solidity.
+- **Better analysis techniques:** Integrating more sophisticated machine learning models for deeper analysis.
+- **Enhanced UX/UI:** Improving the feedback UI and adding more interactive features.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## License
+This project is licensed under the MIT License.
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## Contact
+For any issues or suggestions, feel free to reach out to [Shlok](https://github.com/SHLOK333) via GitHub.
